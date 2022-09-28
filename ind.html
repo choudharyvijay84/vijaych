@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: blue;
+            height: 500px;
+            width: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+        }
+        /* .container:hover{
+            background-color: black;
+            color: white;
+            transition: 3s;
+            transform: rotateY(180deg);
+        } */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input type="text" name="" id="inp" placeholder="please inter any color"><br>
+    <button id="btn">please check</button>
+    <div id="out"></div>
+    </div>
+    
+    <script>
+        let color_array = ["green","yellow","black","white","orange","red","blue"];
+        let a = Math.floor(Math.random()*10);
+        let b = color_array[a];
+         console.log(color_array.length);
+
+
+        let inpt = document.getElementById("inp");
+        let output = document.getElementById("out");
+
+        document.getElementById("btn").onclick =function(){
+            let final = inpt.value;
+            if(final==b){
+                output.innerHTML = "you won"
+                
+                
+            }
+            else{
+                output.innerHTML = "you loss"
+                // document.write(`you loss bcz random color is ${b}`)
+            }
+        }
+        
+
+    </script>
+</body>
+</html>
